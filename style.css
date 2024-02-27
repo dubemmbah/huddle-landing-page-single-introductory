@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400&display=swap");
+
+:root {
+  /* PRIMARY */
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  /* NEUTRAL */
+  --black: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./images/bg-desktop.svg) no-repeat;
+  background-color: var(--violet);
+  font-size: 1.5rem;
+  font-family: "Poppins", "Open Sans", sans-serif;
+  min-height: 100vh;
+  padding: 5rem 7.25rem;
+}
+
+.header {
+  margin-bottom: 8rem;
+}
+
+.header > img {
+  width: 22rem;
+  height: 5.5rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.overview-left {
+  flex-shrink: 1;
+  flex-basis: 130%;
+}
+
+.overview-left > img {
+  width: 100%;
+}
+
+.overview-right {
+  flex: 100%;
+  color: hsl(0, 0%, 100%);
+  padding: 4.5rem;
+}
+
+.heading-main {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.intro-main {
+  font-size: 1.55rem;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+.btn-register {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem 6.5rem;
+  font-size: 1.8rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: var(--violet);
+  transition: 0.4s ease;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-register:hover {
+  transform: translateY(0.2rem);
+  color: hsl(0, 0%, 100%);
+  background-color: var(--soft-magenta);
+}
+
+.footer {
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-end;
+}
+
+.icon-link {
+  text-decoration: none;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: hsl(0, 0%, 100%);
+  outline: 1px solid currentColor;
+  outline-offset: 8px;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+.icon-link:hover .icon {
+  color: var(--soft-magenta);
+  transform: translateY(0.1rem);
+}
+
+@media (max-width: 81.125em) {
+  body {
+    padding: 4rem;
+  }
+  .main {
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+
+  .overview-right {
+    padding: 0;
+  }
+
+  .heading-main {
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+
+  .intro-main {
+    max-width: 70rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 auto 3rem;
+  }
+
+  .btn-register {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer {
+    margin-top: 6rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 31.25em) {
+  body {
+    background: url(./images/bg-mobile.svg) no-repeat top center/contain;
+    background-color: var(--violet);
+  }
+}
