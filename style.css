@@ -155,5 +155,6 @@ body {
   body {
     background: url(./images/bg-mobile.svg) no-repeat top center/contain;
     background-color: var(--violet);
+    padding: 5rem 2.5rem;
   }
 }
